@@ -1,8 +1,8 @@
-#task_4
+# task_4
 
-def my_func(x, y):
-    c = x ** y
-    return c
-
-
-print(my_func(float(input("Введите положительное число: ")), int(input('Введите целое отрицательно число: '))))
+from collections import Counter
+lst = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+counter = Counter(lst)
+unique = [x for x, n in counter.items() if n == 1]
+print(lst)
+print(unique)

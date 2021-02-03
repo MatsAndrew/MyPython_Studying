@@ -1,9 +1,18 @@
-#task_6
+# task_6
 
-def int_func(**kwargs):
-    word = input('Введите ваши слова латиницей с маленькой буквы: ')
-    print(word.title())
-    return
+from itertools import count
+from itertools import cycle
 
 
-int_func()
+for el in count(3):
+    if el == 10:
+        break
+    else:
+        print(int(el))
+
+c = 0
+for el in cycle("шалаш "):
+    if c > 20:
+        break
+    print(el)
+    c += 1
