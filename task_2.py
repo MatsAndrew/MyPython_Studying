@@ -1,9 +1,15 @@
 # task_2
+class Road:
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
+        self.weight = 25
+        self.height = 5
 
-lst = list(input('Введите элементы списка без пробела: '))
-a = 0
-for i in range(int(len(lst)/2)):
-    lst[a], lst[a+1] = lst[a+1], lst[a]
-    a += 2
+    def mass(self):
+        mass = self._length * self._width * self.weight * self.height
+        print(f'Нам понадобится {mass} кг асфальта')
 
-print(lst)
+
+r = Road(20, 5000)
+r.mass()

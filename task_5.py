@@ -1,18 +1,32 @@
-#task_5
+# task_5
+class Stationery:
+    def __init__(self, title):
+        self.title = title
 
-number = int(input("Введите число: "))
-my_list = [5, 4, 3, 5, 2]
-a = my_list.count(number)
-for element in my_list:
-    if a > 0:
-        i = my_list.index(number)
-        my_list.insert(i+a, number)
-        break
-    else:
-        if number > element:
-            j = my_list.index(element)
-            my_list.insert(j, number)
-            break
-        elif number < my_list[len(my_list) - 1]:
-            my_list.append(number)
-print(my_list)
+    def draw(self):
+        print('Запуск отрисовки')
+
+
+class Pen(Stationery):
+    def draw(self):
+        print(f'Запуск отрисовки {self.title}')
+
+
+class Pencil(Stationery):
+    def draw(self):
+        print(f'Запуск отрисовки {self.title}')
+
+
+class Handle(Stationery):
+    def draw(self):
+        print(f'Запуск отрисовки {self.title}')
+
+
+stationery = Stationery(None)
+stationery.draw()
+pen = Pen('ручкой')
+pen.draw()
+pencil = Pencil('карандашем')
+pencil.draw()
+handle = Handle('маркером')
+handle.draw()
